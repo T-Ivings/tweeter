@@ -1,0 +1,24 @@
+nav { 
+  display: flex;
+  justify-content: space-between;
+  background-color: #4056A1;
+  height: 120px;
+  padding: 1.5em 1.5em 1.5em 1.5em
+}
+span {
+  color: #ffffff;
+}
+
+.tweeter {
+  font-family: "Bungee", cursive;
+
+}
+
+.write {  
+
+}
+
+.arrow {
+display: flex;
+justify-content: center;
+}
