@@ -5,21 +5,37 @@
  */
 html {
   box-sizing: border-box;
+  
 }
 *, *:before, *:after {
   box-sizing: inherit;
+  
 }
+
 
 /*
  * Global layout stuff
  */
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
+main {
+  align-self: center;
+  width: 90%;
+  background-color: #f4f1ec;
+  font-family: "Bungee", cursive;
+}
+.red {
+  color: red;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
