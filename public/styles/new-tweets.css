@@ -1,0 +1,29 @@
+button {
+  background-color:  #4056A1;
+  border: none;
+  color: #ffffff;
+  padding: 4px 8px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 2px;
+  justify-content: flex-start;
+}
+
+textarea {
+display: flex;
+align-items: stretch;
+background-color: transparent;
+border: 0px;
+border-bottom: solid;
+height: 50px;
+width: 100%;
+color: #000000;
+font-family: "Source Sans Pro", sans-serif;
+outline: none;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
