@@ -33,7 +33,7 @@
         <span class="arrow">⟱</span></span>
     </nav>
 
-    <header>
+    <header id="headpage">
       <div class="avatar">
           <img src="/images/profile-hex.png"> 
       </div>
@@ -49,17 +49,28 @@
       <form action="/tweets" method="POST">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
-        <div class="footer">
+        <footer class="lowerform">
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
     </section>
-    </main>
 
-    <script>("dblclick", (event) => {
-      console.log(event);
-    });
-  </script>
+   <section id="tweetcontainer">
+    <article class="tweet">
+      <header>
+        <div class="name"><div></div>Adler</div>
+        <div class="handle">@AlfredAdler</div>
+      </header>
+      <div>The only normal people are the ones you don't know very well.</div>
+      <div class="border"></div>
+      <footer>
+        <div>10 days ago</div>
+        <div><img src="images/flags.png"><img src="images/retweet.png"><img src="images/like.png"></div>
+      </footer>
+    </article>
+  </section>
+
+  </main>
   </body>
 </html>

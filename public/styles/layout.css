@@ -30,12 +30,33 @@ body {
 main {
   align-self: center;
   width: 90%;
-  background-color: #f4f1ec;
+  background-color: #f4f1ec;    
   font-family: "Bungee", cursive;
 }
-.red {
-  color: red;
+
+div {
+  font-family: "Source Sans Pro", sans-serif;
+  padding-left: 1em;
+  font-weight: bold;
 }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 .5em .5em .5em;
+  font-size: small;
+}
+img {
+  padding: 0 .5em 0 .5em;
+}
+
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+
+ 
+
+
+

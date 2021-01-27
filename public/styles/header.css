@@ -1,5 +1,6 @@
-header {
-  height: 400px;
+#headpage {
+  padding-top: 125px;
+  height: auto;
   background-color: #f200ff;
   background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
