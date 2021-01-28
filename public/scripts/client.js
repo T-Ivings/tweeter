@@ -25,12 +25,14 @@ const data = [
   }
 ]
 
+//renders tweets on index.html
 const renderTweets = function(tweets) {
   for (const user of tweets) {
     $('#tweets-container').prepend(createTweetElement(user)); 
   }
 }
 
+//creates form populated with user + tweet info
 const createTweetElement = function(tweet) {
   const timeTweeted = new Date(tweet.created_at)
   let $tweet = `<article class="tweet">
@@ -48,6 +50,8 @@ const createTweetElement = function(tweet) {
 
 return $tweet;
 }
+
+//if 'tweet' button is clicked, and only if it does not error, tweet post request
 $(function() {
   const $button = $('#tweetbutt');
   $button.on('click', function(event) {
@@ -71,6 +75,7 @@ $(function() {
   })
 })
 
+//loads tweets from /tweets
 loadTweets = () => {
   $.getJSON('/tweets')
   .then(function (data) {
@@ -81,7 +86,7 @@ loadTweets = () => {
   })
 }
 
-//
+//anti breaking magic
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
