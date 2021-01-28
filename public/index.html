@@ -6,6 +6,7 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -15,6 +16,7 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -46,30 +48,20 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div class="hidden invis" id="char">⚠YOU HAVE TYPED TOO MANY CHARACTERS, PLEASE LOWER BELOW 140⚠</div>
+        <div class="hidden invis" id="null">⚠TWEET CANNOT BE LEFT BLANK⚠</div>
+        <div class="hidden invis" id="space">⚠YOUR TWEET MAY NOT BE ONLY SPACES⚠</div>
       <form action="/tweets" method="POST">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
-        <footer class="lowerform">
-          <button type="submit">Tweet</button>
+        <footer class="lowerfont">
+          <button type="submit" id=tweetbutt>Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
     </section>
 
-   <section id="tweetcontainer">
-    <article class="tweet">
-      <header>
-        <div class="name"><div></div>Adler</div>
-        <div class="handle">@AlfredAdler</div>
-      </header>
-      <div>The only normal people are the ones you don't know very well.</div>
-      <div class="border"></div>
-      <footer>
-        <div>10 days ago</div>
-        <div><img src="images/flags.png"><img src="images/retweet.png"><img src="images/like.png"></div>
-      </footer>
-    </article>
-  </section>
+   <section id='tweets-container'></section>
 
   </main>
   </body>
