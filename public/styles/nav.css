@@ -1,15 +1,17 @@
 nav { 
   display: flex;
   justify-content: space-between;
-  background-color: #4056A1;
+  background-color: #d8cbdc;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   height: 120px;
-  padding: 1.5em 1.5em 1.5em 1.5em;
-  position: fixed;
+  padding: 1.5em;
+  position: static;
   top: 0;
   width: 100%;
+  z-index:2;
 }
-span {
-  color: #ffffff;
+.color {
+  color: #194F92;
 }
 
 .tweeter {

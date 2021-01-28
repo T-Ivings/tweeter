@@ -12,26 +12,32 @@ html {
   
 }
 
+*,*:focus,*:hover{
+  outline:none;
+}
+
 
 /*
  * Global layout stuff
  */
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #545149;
-  background-color: #f4f1ec;
+  color: #E5C0C8;
+  background-color: #E5C0C8;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+
 main {
-  align-self: center;
-  width: 90%;
-  background-color: #f4f1ec;    
-  font-family: "Bungee", cursive;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #E5C0C8;    
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  font-size: larger;
+  padding-top: 24px;
 }
 
 div {
@@ -50,10 +56,47 @@ img {
   padding: 0 .5em 0 .5em;
 }
 
+h2 {
+  color:  #876C8f
+}
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ @media only screen and (min-width: 768px) {
+  #headpage {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-right: 3em;
+    margin-left: 3em;
+    padding-right: 1em;
+    height: 375px;
+
+  }
+
+  #navbar {
+  background-color: #CBD5F0;
+  width: 100%;
+  position: fixed;
+  top: 1;
+  background-image: none;
+  }
+
+   
+  #box {
+    display: flex;
+    margin-top: 6em;
+    margin-right: 3em;
+    justify-content: flex-start
+
+  
+  }
+
+}
+
+
 
 
  

@@ -1,32 +1,48 @@
+#box {
+  width: 100%
+}
+
 button {
-  background-color:  #4056A1;
   border: none;
-  color: #ffffff;
-  padding: 4px 8px;
+  color: #194F92;
+  padding: 8px 8px;
   text-align: center;
-  text-decoration: none;
   margin: 4px 2px;
   justify-content: flex-start;
+  border-radius: 8px;
+  background: #CBD5F0;
+  width: 80px;
+  height: 38px;
+
+}
+
+button:active {
+  transform: translateY(3px);
 }
 
 textarea {
 display: flex;
 align-items: stretch;
 background-color: transparent;
-border: 0px;
+border: 0;
 border-bottom: solid;
 height: 50px;
 width: 100%;
-color: #000000;
+color: #943257;
 font-family: "Source Sans Pro", sans-serif;
-outline: none;
 }
 
 
-.lowerform {
+.lowerfont {
   display: flex;
   justify-content: space-between;
   font-size: large;
+  font-family: "Bungee", cursive;
+}
+
+.counter {
+  font-family: "Bungee", cursive;
+  color:  #61b4a2
 }
 
 .red {
@@ -36,10 +52,12 @@ outline: none;
 .tweet {
   width: 100%;
   height: 200px;
-  border: solid;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 24px;
+  border-radius: 25px;
+  background: #b46173;
 }
 
 
@@ -59,7 +77,20 @@ outline: none;
 }
 
 .handle {
-  color: #d3d3d3 ;
+  color: #FAFAFB ;
+  opacity: 0;
+}
+
+.hidden {
+  display: flex;
+  justify-content: center;
+  color: red;
+  font-size: 100%;
+  border: solid;
+  border-color: red;
+}
+
+.invis {
   opacity: 0;
 }
 
@@ -68,6 +99,5 @@ outline: none;
 }
 
 .tweet:hover {
-  box-shadow: #d3d3d3 5px 5px 2px;
-  filter: blur(0px)
+  box-shadow: #FAFAFB 5px 5px 2px;
 }

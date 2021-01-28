@@ -1,20 +1,19 @@
 #headpage {
-  padding-top: 125px;
-  height: auto;
-  background-color: #f200ff;
-  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
+  height: 400;
+  background-color: #d8cbdc;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
-.avatar {
-display: flex;
-justify-content: center;
-align-items: center;
-padding-top: 10px;
-}
+  .avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  }
 
-.name {
-display: flex;
-justify-content: center;
-align-items: center;
-}
+  .name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
