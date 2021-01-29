@@ -17,7 +17,7 @@ button {
 }
 
 button:active {
-  transform: translateY(3px);
+  transform: translateY(3px); /*Clickable button */
 }
 
 textarea {
