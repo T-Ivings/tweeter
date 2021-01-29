@@ -15,3 +15,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- MomentJS
+- MD5
+- Chance
+
+## Screenshots
+
+!["Screenshot of tweets"](https://github.com/T-Ivings/tweeter/blob/master/Docs/Tweets.png?raw=true)
+!["Screenshot of tablet display"](https://github.com/T-Ivings/tweeter/blob/master/Docs/header.png?raw=true)
