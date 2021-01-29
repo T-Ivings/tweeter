@@ -32,8 +32,8 @@
     <!-- Top nav bar (fixed) -->
     <nav id="navbar">
       <span class="tweeter color">TWEETER</span>
-        <span class="color"><b>Write</b> a new tweet
-        <span class="arrow color">⟱</span></span>
+        <a href="#tweet-text" class="color"><b>Write</b> a new tweet
+          <img id="arrow" src="images/down-arrow.png"></a>
     </nav>
   <span id=box>
     <header id="headpage">
@@ -53,11 +53,11 @@
         <div class="hidden invis" id="null">⚠TWEET CANNOT BE LEFT BLANK⚠</div>
         <div class="hidden invis" id="space">⚠YOUR TWEET MAY NOT BE ONLY SPACES⚠</div>
       <form action="/tweets" method="POST">
-        <label class="counter">What are you humming about?</label>
+        <label class="green">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
         <footer class="lowerfont">
           <button type="submit" id=tweetbutt>Tweet</button>
-          <div class="counter">140</div>
+          <output name="counter" class="counter green" for="tweet-text">140</output>
         </div>
       </form>
     </section>

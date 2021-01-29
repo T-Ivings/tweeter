@@ -19,7 +19,8 @@ nav {
 
 }
 
-.arrow {
-display: flex;
-justify-content: center;
+/* Keeps the "link" up top looking like normal text */
+a:link, a:visited {
+  text-decoration: none;
+  color: #194F92;
 }

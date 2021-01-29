@@ -40,7 +40,7 @@ font-family: "Source Sans Pro", sans-serif;
   font-family: "Bungee", cursive;
 }
 
-.counter {
+.green {
   font-family: "Bungee", cursive;
   color:  #61b4a2
 }
@@ -77,13 +77,13 @@ font-family: "Source Sans Pro", sans-serif;
 }
 
 .handle {
-  color: #FAFAFB ;
+  color: #FAFAFB;
   opacity: 0;
 }
 
 .hidden {
   display: flex;
-  justify-content: center;
+  align-self: center;
   color: red;
   font-size: 100%;
   border: solid;

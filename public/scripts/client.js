@@ -1,40 +1,16 @@
 $(document).ready(function() {
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
 
 //renders tweets on index.html
 const renderTweets = function(tweets) {
   for (const user of tweets) {
     $('#tweets-container').prepend(createTweetElement(user)); 
   }
-}
+};
 
 //creates form populated with user + tweet info
 const createTweetElement = function(tweet) {
-  const timeTweeted = new Date(tweet.created_at)
+  const timeTweeted = new Date(tweet.created_at);
   let $tweet = `<article class="tweet">
   <header>
     <div class="name"><img src='${tweet.user.avatars}'> ${tweet.user.name}</div>
@@ -49,7 +25,7 @@ const createTweetElement = function(tweet) {
 </article>`
 
 return $tweet;
-}
+};
 
 //if 'tweet' button is clicked, and only if it does not error, tweet post request
 $(function() {
@@ -57,23 +33,34 @@ $(function() {
   $button.on('click', function(event) {
     event.preventDefault();
     if ($('textarea').val().length > 140) {
+
       $('#char').removeClass('invis').slideDown(200);
+      setTimeout(function(){ $('#char').slideUp(200); }, 3000);
+
     } else if ($('textarea').val() === null || $('textarea').val() === "") {
+
       $('#null').removeClass('invis').slideDown(200);
+      setTimeout(function(){ $('#null').slideUp(200); }, 3000);
+
     } else if(decodeURI($('textarea').serialize()).trim() === 'text=') {
+
       $('#space').removeClass('invis').slideDown(200);
+      setTimeout(function(){ $('#space').slideUp(200); }, 3000);
+
     } else {
       const data = $('textarea').serialize();
       console.log(decodeURI(data).trim());
-      $.post('/tweets', data)       
+      $.post('/tweets', data)
       .then(function() {
         loadTweets();
-        $('textarea').val('')
+        //clear out text area, empty tweet container
+        $('textarea').val('');
         $('.counter').val(140);
+        $('#tweets-container').empty();
       })
     }
-  })
-})
+  });
+});
 
 //loads tweets from /tweets
 loadTweets = () => {
@@ -84,14 +71,14 @@ loadTweets = () => {
     $('#null').slideUp(0).addClass('invis');
     $('#space').slideUp(0).addClass('invis');
   })
-}
+};
 
 //anti breaking magic
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
 loadTweets();
 });

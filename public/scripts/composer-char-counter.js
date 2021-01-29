@@ -1,10 +1,11 @@
+//function runs the counter on page
 $(document).ready(function() {
   $("#tweet-text").keyup(function() {
-    $(".counter").text(140 - this.value.length);
+    $(this).siblings().children('.counter').text(140 - this.value.length);
     if (this.value.length > 140) {
-      $(".counter").addClass("red");
+      $(this).siblings().children('.counter').addClass("red");
     } else {
-        $(".counter").removeClass("red");
+        $(this).siblings().children('.counter').removeClass("red");
     }
   });
 });
